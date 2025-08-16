@@ -1,4 +1,5 @@
-import os, requests
+import os
+import requests
 from typing import List
 from ..models import Job
 

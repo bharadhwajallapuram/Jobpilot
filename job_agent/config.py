@@ -1,4 +1,6 @@
-import os, toml, pathlib
+import os
+import toml
+import pathlib
 
 def load_config():
     path = pathlib.Path("config.toml")

@@ -1,4 +1,5 @@
-import os, json, pathlib
+import json
+import pathlib
 from job_agent.config import load_config
 from job_agent.adapters.greenhouse import fetch_greenhouse
 from job_agent.adapters.lever import fetch_lever
@@ -6,7 +7,6 @@ from job_agent.adapters.ashby import fetch_ashby
 from job_agent.adapters.smartrecruiters import fetch_smartrecruiters
 from job_agent.adapters.monster_rss import fetch_monster_rss
 from job_agent.adapters.dice_api import fetch_dice
-from job_agent.adapters.indeed_linkedin_playwright import fetch_from_signed_in_search
 from job_agent.sheets import open_sheet, append_jobs
 from job_agent.llm.generate import generate_cover_letter, tailor_resume
 

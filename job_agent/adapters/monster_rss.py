@@ -1,4 +1,5 @@
-import requests, xml.etree.ElementTree as ET
+import requests
+import xml.etree.ElementTree as ET
 from typing import List
 from ..models import Job
 

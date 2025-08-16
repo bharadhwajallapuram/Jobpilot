@@ -1,4 +1,4 @@
-import requests, json
+import requests
 from typing import List
 from ..models import Job
 from .utils import strip_html

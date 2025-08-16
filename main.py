@@ -1,4 +1,5 @@
-import os, json, pathlib
+import json
+import pathlib
 from job_agent.config import load_config
 from job_agent.adapters.greenhouse import fetch_greenhouse
 from job_agent.adapters.lever import fetch_lever

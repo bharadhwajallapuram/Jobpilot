@@ -1,4 +1,5 @@
-import base64, os
+import base64
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication

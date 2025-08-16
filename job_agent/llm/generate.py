@@ -1,4 +1,6 @@
-import os, json, re
+import os
+import json
+import re
 from typing import List
 from openai import OpenAI
 from docx import Document

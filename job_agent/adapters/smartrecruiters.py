@@ -1,7 +1,6 @@
 import requests
 from typing import List
 from ..models import Job
-from .utils import strip_html
 
 def fetch_smartrecruiters(company_slug: str) -> List[Job]:
     # Public endpoint pattern (varies by org). This one lists postings:
