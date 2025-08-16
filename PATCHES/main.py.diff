@@ -1,0 +1,31 @@
+
+*** main.py (old)
+--- main.py (new)
+@@
+-from job_agent.llm.generate import generate_cover_letter, tailor_resume
++from job_agent.llm.generate import generate_cover_letter, tailor_resume
++from job_agent.adapters.monster_rss import fetch_monster_rss
++from job_agent.adapters.dice_api import fetch_dice
++from job_agent.adapters.indeed_linkedin_playwright import fetch_from_signed_in_search
+@@
+-    jobs = fetch_all(cfg)
++    jobs = fetch_all(cfg)
++    # Extra sources (Monster RSS, Dice API, LinkedIn/Indeed via Playwright review)
++    extra = cfg.get("targets_extra", {})
++    try:
++        jobs += fetch_monster_rss(extra.get("monster_query",""), extra.get("monster_location",""))
++    except Exception:
++        pass
++    try:
++        jobs += fetch_dice(extra.get("dice_query",""), extra.get("dice_location",""))
++    except Exception:
++        pass
++    # Human-in-the-loop flows (uncomment to use)
++    # try:
++    #     jobs += fetch_from_signed_in_search(extra.get("linkedin_search_url",""))
++    # except Exception:
++    #     pass
++    # try:
++    #     jobs += fetch_from_signed_in_search(extra.get("indeed_search_url",""))
++    # except Exception:
++    #     pass

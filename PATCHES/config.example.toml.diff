@@ -1,0 +1,17 @@
+
+*** config.example.toml (old)
+--- config.example.toml (new)
+@@
+ [targets]
+ greenhouse = ["exampleco"]
+ lever      = ["examplelever"]
+ ashby      = ["exampleashby"]
+ smartrecruiters = ["examplesr"]
++
++[targets_extra]
++monster_query = "data analyst"
++monster_location = "New York, NY"
++dice_query = "data analyst"
++dice_location = "New York, NY"
++linkedin_search_url = "https://www.linkedin.com/jobs/search/?keywords=data%20analyst&location=New%20York"
++indeed_search_url   = "https://www.indeed.com/jobs?q=data+analyst&l=New%20York%2C+NY"

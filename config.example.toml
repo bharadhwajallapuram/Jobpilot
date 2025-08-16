@@ -1,0 +1,21 @@
+[google]
+sheet_id = "YOUR_GOOGLE_SHEET_ID_HERE"
+
+[openai]
+api_key = "YOUR_OPENAI_API_KEY_HERE"
+
+[gmail]
+# Leave empty to skip sending. If configured, requires token.json (OAuth).
+from_email = "your_email@example.com"
+
+[agent]
+master_resume_json = "data/master_resume.json"
+bullet_bank_json   = "data/bullets.json"
+output_dir         = "outputs"
+max_jobs_per_run   = 5
+
+[targets]
+greenhouse = ["exampleco"]     # e.g., "openai", "databricks"
+lever      = ["examplelever"]  # e.g., "doordash", "netflix"
+ashby      = ["exampleashby"]  # e.g., "acme"
+smartrecruiters = ["examplesr"]# e.g., "spotify"

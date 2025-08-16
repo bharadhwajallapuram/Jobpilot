@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  job-agent:
+    build: .
+    container_name: job-agent
+    env_file:
+      - .env
+    environment:
+      # Secrets can also be passed directly here or via your CI/CD
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      # Mount outputs for artifacts
+      - ./outputs:/app/outputs
+      # Mount service account & gmail tokens if you want to use APIs locally
+      - ./service_account.json:/app/service_account.json:ro
+      - ./token.json:/app/token.json:ro
+      # Optional: mount config.toml if you don't want to bake it in
+      - ./config.toml:/app/config.toml:ro
+    command: ["python", "main.py"]

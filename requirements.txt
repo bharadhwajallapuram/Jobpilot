@@ -1,0 +1,22 @@
+# Core
+toml
+pydantic>=2.5
+requests>=2.31
+
+# Browser automation (optional auto-apply)
+playwright>=1.45
+
+# Google APIs
+gspread>=6.0.0
+google-auth>=2.29.0
+google-auth-oauthlib>=1.2.0
+google-api-python-client>=2.142.0
+
+# LLM for cover letters & tailoring
+openai>=1.30.0
+python-docx>=1.1.0
+jinja2>=3.1.3
+
+# HTML parsing (fallbacks)
+beautifulsoup4>=4.12.3
+lxml>=5.2.2
