@@ -59,21 +59,3 @@ main.py           # orchestrator
 
 Enjoy and customize!
 
-
-# Update Pack: Monster, Dice, LinkedIn/Indeed Adapters
-
-This pack adds:
-- `job_agent/adapters/monster_rss.py`
-- `job_agent/adapters/dice_api.py`
-- `job_agent/adapters/indeed_linkedin_playwright.py`
-- Updated `main.py` (drop-in replacement provided) **and** a unified diff
-- Updated `config.example.toml` (drop-in replacement provided) **and** a unified diff
-
-## How to apply
-1. Copy `job_agent/adapters/*.py` into your repo at the same paths.
-2. Replace your `main.py` with `dropin/main.py` **OR** apply `PATCHES/main.py.diff` manually.
-3. Replace your `config.example.toml` with `dropin/config.example.toml` **OR** apply `PATCHES/config.example.toml.diff` manually.
-4. Set environment vars for Dice if you have credentials:
-   - `DICE_API_BASE`, `DICE_API_KEY`
-5. (Optional) Uncomment LinkedIn/Indeed lines in `main.py` to enable human-in-the-loop collection.
-
