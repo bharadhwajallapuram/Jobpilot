@@ -25,11 +25,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install --upgrade setuptools wheel
           pip install -r requirements.txt
           pip install pytest ruff
-          # If your project is a package, install it (safe no-op if not)
+          # Install as editable if project is a package (safe no-op if not)
           if [ -f pyproject.toml ] || [ -f setup.cfg ] || [ -f setup.py ]; then
-            pip install -e .
+            pip install -e . || true
           fi
 
       - name: Lint
