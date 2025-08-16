@@ -1,5 +1,6 @@
 # Jobpilot
 Job Pilot – An open-source, AI-powered job-hunting copilot. It automatically searches and aggregates job postings from multiple sources – including Greenhouse, Lever, Ashby, SmartRecruiters, Monster (RSS), Dice (API), LinkedIn, and Indeed – then logs them into Google Sheets for tracking.
+<<<<<<< HEAD
 
 An end-to-end *job-hunt copilot* that:
 1) searches job boards (Greenhouse, Lever, Ashby, SmartRecruiters),
@@ -76,3 +77,5 @@ This pack adds:
 4. Set environment vars for Dice if you have credentials:
    - `DICE_API_BASE`, `DICE_API_KEY`
 5. (Optional) Uncomment LinkedIn/Indeed lines in `main.py` to enable human-in-the-loop collection.
+=======
+>>>>>>> f3f5d3f915ebce3985b4b6fd12e7b17ab5168c5b
